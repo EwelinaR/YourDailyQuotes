@@ -15,4 +15,6 @@
     <string name="menu_logout">Log out</string>
 
     <string name="add_quote">Add quote</string>
+    <string name="text_home2">Add your favourites quotes and get notifications with them every day</string>
+    <string name="text_home1">This is</string>
 </resources>
