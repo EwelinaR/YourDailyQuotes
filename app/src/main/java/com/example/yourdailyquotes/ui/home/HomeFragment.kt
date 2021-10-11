@@ -21,7 +21,6 @@ class HomeFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View {
         homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
-
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         binding.quoteText.text = homeViewModel.quote.value
