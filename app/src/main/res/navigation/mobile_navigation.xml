@@ -22,11 +22,25 @@
         android:id="@+id/nav_tags"
         android:name="com.example.yourdailyquotes.ui.tags.TagListFragment"
         android:label="@string/menu_tags"
-        tools:layout="@layout/fragment_tags" />
+        tools:layout="@layout/fragment_tags" >
+        <action
+            android:id="@+id/action_nav_tags_to_nav_list_quote"
+            app:destination="@id/nav_quote_list" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_quote"
         android:name="com.example.yourdailyquotes.ui.quote.QuoteFragment"
         android:label="@string/menu_quote"
         tools:layout="@layout/fragment_quote" />
+
+    <fragment
+        android:id="@+id/nav_quote_list"
+        android:name="com.example.yourdailyquotes.ui.quotelist.QuoteListFragment"
+        android:label="@string/menu_search_quote"
+        tools:layout="@layout/fragment_quote_list" >
+        <argument
+            android:name="tag_name"
+            app:argType="string" />
+    </fragment>
 </navigation>
