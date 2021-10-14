@@ -32,7 +32,12 @@
         android:id="@+id/nav_quote"
         android:name="com.example.yourdailyquotes.ui.quote.QuoteFragment"
         android:label="@string/menu_quote"
-        tools:layout="@layout/fragment_quote" />
+        tools:layout="@layout/fragment_quote" >
+        <argument
+            android:name="quote_name"
+            app:argType="string"
+            android:defaultValue="random" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_quote_list"
@@ -42,5 +47,8 @@
         <argument
             android:name="tag_name"
             app:argType="string" />
+        <action
+            android:id="@+id/action_nav_quote_list_to_nav_quote"
+            app:destination="@id/nav_quote" />
     </fragment>
 </navigation>
